@@ -27,11 +27,12 @@ jobs:
       - run: npm i gatsby-cli        
       - run: gatsby build
 
-      - name: Greet
-        run: 
-          echo This should echo in parallel with build start step.        
-
-      - name: Goodbye
-        needs: Build
-        run:
-          echo This should echo after the build step completes.            
+  Greet:
+    steps:
+    - run: echo This should echo in parallel with build start step.
+  
+  shutdown:  
+    steps:   
+      needs: Build
+      run:
+        echo This should echo after the build step completes.            
