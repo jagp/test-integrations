@@ -32,7 +32,7 @@ jobs:
     - run: echo This should echo in parallel with build start step.
   
   shutdown:  
+    needs: Build
     steps:   
-      needs: Build
-      run:
+      - run:
         echo This should echo after the build step completes.            
