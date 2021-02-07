@@ -1,0 +1,140 @@
+@import "../styles/_site-variables.scss";
+
+.hero {
+  height: 690px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 55% 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  font-family: $font-family-base;
+  line-height: 1.1;
+}
+
+.hero.patientExperiencePage {
+  @include media("<=tablet") {
+    background-position: 84% 50%;
+  }
+  .heroContent {
+    @include media(">=tablet") {
+      width: 490px;
+      height: 295px;
+      p {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.hero.patientExperienceInner {
+  .heroContent {
+    h1 {
+      color: $primary-text;
+      font-size: 85px;
+      font-weight: $font-weight-semibold;
+      @include media("<=laptop") {
+        font-size: 65px;
+      }
+      @include media("<tablet") {
+        font-size: 55px;
+      }
+    }
+    h2 {
+      color: black;
+      font-size: 47px;
+      font-weight: $font-weight-light;
+      @include media("<=laptop") {
+        font-size: 41px;
+      }
+      @include media("<tablet") {
+        font-size: 31px;
+      }
+    }
+    p {
+      color: $primary-text;
+      font-size: 22px;
+      font-family: $font-family-body-text;
+      font-weight: $font-weight-light;
+      margin-top: 16px;
+      @include media("<=laptop") {
+        font-size: 18px;
+      }
+    }
+    @include media(">=desktop") {
+      width: 650px;
+      height: 330px;
+      p {
+        width: 90%;
+      }
+    }
+    @include media("<desktop") {
+      width: 535px;
+      height: auto;
+      h2 {
+        margin-bottom: 15px;
+      }
+    }
+    @include media("<=425px") {
+      width: auto;
+      height: auto;
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  @include media("<tablet") {
+    text-align: center;
+  }
+}
+
+.hero.pxPlansPage {
+  .heroContent {
+    h1 {
+      font-size: 55px;
+      color: #fff;
+    }
+    h2 {
+      font-size: 71px;
+      font-weight: $font-weight-light;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #fff;
+      font-size: 22px;
+    }
+    @include media(">=desktop") {
+      width: 650px;
+      height: 330px;
+      p {
+        width: 90%;
+      }
+    }
+    @include media("<desktop") {
+      width: 535px;
+      height: auto;
+      h2 {
+        margin-bottom: 15px;
+        font-size: 53px;
+      }
+    }
+    @include media("<=425px") {
+      width: auto;
+      height: auto;
+      text-align: center;
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 40px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

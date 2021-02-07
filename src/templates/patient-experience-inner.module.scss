@@ -1,0 +1,154 @@
+@import "../styles/_site-variables.scss";
+
+.patientExperiencePage {
+  .contentTitle {
+    $font-family: $font-family-base;
+    width: 99%;
+    h3 {
+      color: $primary;
+      font-weight: $font-weight-semibold;
+      font-size: 30px;
+      line-height: 1;
+    }
+    h2{
+      font-size: 54px;
+      color: black;
+      font-weight: $font-weight-light;
+      line-height: 1;
+      @include media("<=425px") {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .contentParagraph {
+    margin-top: 15px;
+    width: 85%;
+    p {
+      color: #2f2f2f;
+      font-family: $font-family-body-text;
+      font-size: $font-size-base;
+      margin-bottom:15px;
+    }
+  }
+
+  .iconRow {
+    font-family: $font-family-base;
+  }
+
+  .contentList {
+    p {
+      width: 261px;
+      background-color: #F6F6F6;
+      padding-left: 20px;
+      font-size: 17px;
+      font-family: $font-family-body-text;
+      font-weight: $font-weight-medium;
+    }
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0px;
+      margin-top: 15px;
+      li {
+        width: 50%;
+        display: inline-block;
+        font-size: $font-size-base;
+        $font-family: $font-family-base;
+        @include media('<=425px') {
+          width: 100%;
+        }
+        img {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  .iconContentRow {
+    margin-bottom: $m1 * 2;
+    margin-top: $m1;
+    @include media('<=425px') {
+      margin-bottom: 35px;
+    }
+  }
+
+  .iconContentTitles {
+    text-align: center;
+    h3 {
+      color: $primary;
+      font-weight: $font-weight-semibold;
+      font-size: 30px;
+    }
+    h2{
+      font-size: 54px;
+      color: black;
+      font-weight: $font-weight-light;
+      line-height: 1;
+      @include media("<=425px") {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .imgResponsive {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+  .linkIcon {
+    margin-right: 10px;
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px calc(17.5px / 2); /* difference between bootstrap col-4 width and design panel width */
+    @include media("<=laptop") {
+      margin: 20px auto 40px;
+    }
+    @include media('<=425px') {
+      margin: 10px 0px;
+    }
+
+    .panelTitle{
+          color: #000;
+          font-weight: $font-weight-semibold;
+          font-size: 1.5em;
+          line-height: 1.3;
+    }
+
+    .panelCaption {
+      color: #000;
+      margin: 5px 0;
+      @include fluid-type($font-size-base, $font-size-base, $laptop, $desktop);
+      font-family: $font-family-base;
+      font-weight: $font-weight-light;
+      @include media("<=laptop") {
+        font-size: 15px;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: $pad;
+    .imgIcon {
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .oddRow img {
+    float: left;
+  }
+  .evenRow:last-of-type {
+    padding-left:20px;
+  }
+}
