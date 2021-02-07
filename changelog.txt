@@ -1,4 +1,6 @@
 ----- Change Log -----
+CI
+
 [2020-12-21] v1.3.9
 - endpoints streamlined & clarified
 - now uses Amazon SES instead of our SMTP server
