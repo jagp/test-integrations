@@ -34,10 +34,3 @@ jobs:
         - run: npm run build --if-present
         - run: npm test
           
-  notify:  
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Notiftications
-      - uses: actions/noop@v1
-        if: github.event == 'push'
