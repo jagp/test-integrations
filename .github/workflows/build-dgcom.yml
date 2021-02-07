@@ -29,10 +29,9 @@ jobs:
 
   Greet:
     steps:
-    - run: echo This should echo in parallel with build start step.
+      - run: echo This should echo in parallel with build start step.
   
   shutdown:  
     needs: Build
     steps:   
-      - run:
-        echo This should echo after the build step completes.            
+      - run: echo This should echo after the build step completes.            
